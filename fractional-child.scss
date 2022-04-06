@@ -1,4 +1,4 @@
-// Generate a reasonable number rules limited by $n.
+// Generate a reasonable number of rules limited by $n.
 @mixin fractional-child($nChildren, $n, $d) {
   @if $nChildren < 3 {
     @error "$nChildren must be greater than or equal to 3! Received #{nChildren}.";
