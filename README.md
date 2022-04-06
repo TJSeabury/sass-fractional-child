@@ -4,8 +4,8 @@ A useful mixin.
 
 I've encountered the need to target the middle child on several occasions, and I've taken to using this sass mixin I wrote after referencing many stackoverflow questions, and their respective answers.
 
-##Usage:
-```sass
+## Usage:
+```scss
 .navigation {
   background-color: #ba0020;
 
