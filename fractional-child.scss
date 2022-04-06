@@ -6,12 +6,12 @@
   @if $n > $d {
     @error "Fractions greater than 1 are not allowed! Received #{$n} / #{$d}.";
   }
-  $frac: math.round(math.div($n, $d));
-  // There is no middle for nChildren less than 3,
+  $frac: math.div($n, $d);
+  // There is no fractional index for nChildren less than 3,
   // so lets just start at 3.
   @for $i from 3 to $nChildren {
     // Find the fractional index, bias right for odd numbers.
-    $index: math.ceil(math.div($i, $frac));
+    $index: math.ceil($i * $frac);
     // Select only those sets of children that number $i.
     &:first-child:nth-last-child(#{$i}) {
       // Select the indexed child of that set.
